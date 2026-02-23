@@ -1,0 +1,14 @@
+{
+  "name": "boomtown-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "React placeholder for boomtown",
+  "scripts": {
+    "dev": "echo 'Frontend placeholder: implement in next phase'",
+    "build": "echo 'Frontend placeholder: implement in next phase'"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
