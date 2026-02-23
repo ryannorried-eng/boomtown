@@ -13,6 +13,7 @@ Autonomous paper-trading sports betting analytics platform skeleton focused on p
 
 ## Quick start
 ```bash
+cp backend/.env.example backend/.env
 docker compose up --build
 ```
 
