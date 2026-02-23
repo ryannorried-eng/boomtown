@@ -13,6 +13,10 @@ class Settings(BaseSettings):
     postgres_host: str = "postgres"
     postgres_port: int = 5432
 
+    odds_api_base_url: str = "https://api.the-odds-api.com/v4"
+    odds_api_key: str = ""
+    odds_source_name: str = "the_odds_api"
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
     @property
