@@ -5,7 +5,9 @@ from sqlalchemy import text
 
 from app.api.health import router as health_router
 from app.api.jobs import router as jobs_router
+from app.api.metrics import router as metrics_router
 from app.api.odds import router as odds_router
+from app.api.picks import router as picks_router
 from app.core.config import settings
 from app.db.session import engine
 
@@ -22,3 +24,5 @@ app = FastAPI(title=settings.app_name, lifespan=lifespan)
 app.include_router(health_router)
 app.include_router(jobs_router)
 app.include_router(odds_router)
+app.include_router(picks_router)
+app.include_router(metrics_router)
