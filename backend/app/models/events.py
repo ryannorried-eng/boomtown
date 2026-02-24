@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from sqlalchemy import DateTime, String
+from sqlalchemy import Boolean, DateTime, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base, TimestampMixin
@@ -17,3 +17,6 @@ class Event(Base, TimestampMixin):
     home_team: Mapped[str | None] = mapped_column(String(128), nullable=True)
     away_team: Mapped[str | None] = mapped_column(String(128), nullable=True)
     commence_time: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    is_completed: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="false", index=True)
+    result: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
